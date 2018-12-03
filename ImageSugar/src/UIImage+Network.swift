@@ -10,7 +10,7 @@ public extension UIImage{
    /**
     * get UIImage from webPath
     */
-   public static func image(webPath:String,onComplete:@escaping DownloadComplete){
+   public static func image(webPath:String, onComplete:@escaping DownloadComplete){
       guard let url = URL.init(string: webPath) else { onComplete(nil,.invalideWebPath);return}
       UIImage.downloadImage(url: url, downloadComplete: onComplete)
    }
