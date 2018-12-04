@@ -6,11 +6,11 @@ import AppKit.NSView
 #else
 import UIKit.UIView
 
-extension UIView {
+public extension UIView {
     /**
      * Returns color for point in UIView
      */
-    func color(point:CGPoint) -> UIColor {
+    public func color(point:CGPoint) -> UIColor {
         let colorSpace:CGColorSpace = CGColorSpaceCreateDeviceRGB()
         let bitmapInfo = CGBitmapInfo.init(rawValue: CGImageAlphaInfo.premultipliedLast.rawValue)//fromRaw()!
 
@@ -29,10 +29,10 @@ extension UIView {
         let color:UIColor = UIColor(red: red, green: green, blue: blue, alpha: alpha)
         return color
     }
-    /*
-    * let resizedImage = image.resize(to: CGSize(width: 50, height: 50))
-    */
-    func resize(to size: CGSize) -> UIImage {
+    /**
+     * let resizedImage = image.resize(to: CGSize(width: 50, height: 50))
+     */
+    public func resize(to size: CGSize) -> UIImage {
         return UIGraphicsImageRenderer(size: size).image { _ in
          draw(CGRect(origin: .zero, size: size))
         }

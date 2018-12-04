@@ -16,6 +16,17 @@ public extension UIImage{
    }
 }
 /**
+ * Typealias, Error-type
+ */
+public extension UIImage{
+   typealias DownloadComplete = (UIImage?,IMGError?) -> Void
+   enum IMGError: Error {
+      case invalideWebPath
+      case imageDataIsCorrupted
+      case errorGettingDataFromURL
+   }
+}
+/**
  * Helper methods
  */
 fileprivate extension UIImage{
@@ -40,16 +51,5 @@ fileprivate extension UIImage{
       URLSession.shared.dataTask(with: url) { data, response, error in
          completion(data, response, error)
          }.resume()
-   }
-}
-/**
- * Typealias, Error-type
- */
-public extension UIImage{
-   typealias DownloadComplete = (UIImage?,IMGError?) -> Void
-   enum IMGError: Error {
-      case invalideWebPath
-      case imageDataIsCorrupted
-      case errorGettingDataFromURL
    }
 }
