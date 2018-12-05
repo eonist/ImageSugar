@@ -1,7 +1,7 @@
 #if os(OSX)
-import AppKit.NSView
+import AppKit.NSImage
 #else
-import UIKit.UIView
+import UIKit.UIImage
 #endif
 /**
  * TODO: ⚠️️ Add a way to also get response, maybe look into result?
