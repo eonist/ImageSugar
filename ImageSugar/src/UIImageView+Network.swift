@@ -1,6 +1,6 @@
 import UIKit
 
-public extension UIImageView{
+ extension UIImageView{
    /**
     * Simplifies loading an image from a weburl to uiimageview
     */
@@ -36,7 +36,7 @@ public extension UIImageView{
 /**
  * Typalias and default
  */
-public extension UIImageView{
+ extension UIImageView{
    public typealias OnError = (UIImage.IMGError?) -> Void
    public static var defaultErrorHandler:OnError = { err in
       Swift.print("img error:  \(String(describing: err))")

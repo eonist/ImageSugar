@@ -4,7 +4,7 @@ import AppKit.NSView
 #else
 import UIKit.UIImage
 
-public extension UIImage {
+ extension UIImage {
     /**
      * let resizedImage = image.resize(to: CGSize(width: 50, height: 50))
      */

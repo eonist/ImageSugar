@@ -6,7 +6,7 @@ import UIKit.UIImage
 /**
  * TODO: ⚠️️ Add a way to also get response, maybe look into result?
  */
-public extension UIImage{
+ extension UIImage{
    /**
     * get UIImage from webPath
     */
@@ -18,9 +18,9 @@ public extension UIImage{
 /**
  * Typealias, Error-type
  */
-public extension UIImage{
-   typealias DownloadComplete = (UIImage?,IMGError?) -> Void
-   enum IMGError: Error {
+ extension UIImage{
+  public typealias DownloadComplete = (UIImage?,IMGError?) -> Void
+  public enum IMGError: Error {
       case invalideWebPath
       case imageDataIsCorrupted
       case errorGettingDataFromURL
@@ -29,7 +29,7 @@ public extension UIImage{
 /**
  * Helper methods
  */
-fileprivate extension UIImage{
+ extension UIImage{
    /**
     * Assign and convert data to Image
     */
@@ -43,7 +43,7 @@ fileprivate extension UIImage{
          downloadComplete(image,nil)
       }
    }
-   typealias URLQuery = (Data?, URLResponse?, Error?) -> ()
+   fileprivate typealias URLQuery = (Data?, URLResponse?, Error?) -> ()
    /**
     * Get data from URL
     */
