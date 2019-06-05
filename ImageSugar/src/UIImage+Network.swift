@@ -4,22 +4,22 @@ import AppKit.NSImage
 import UIKit.UIImage
 #endif
 /**
- * TODO: ⚠️️ Add a way to also get response, maybe look into result?
+ * Fixme: ⚠️️ Add a way to also get response, maybe look into result?
  */
- extension UIImage{
+ extension UIImage {
    /**
     * get UIImage from webPath
     */
-   public static func image(webPath:String, onComplete:@escaping DownloadComplete){
-      guard let url = URL.init(string: webPath) else { onComplete(nil,.invalideWebPath);return}
+   public static func image(webPath: String, onComplete:@escaping DownloadComplete) {
+      guard let url = URL(string: webPath) else { onComplete(nil, .invalideWebPath); return }
       UIImage.downloadImage(url: url, downloadComplete: onComplete)
    }
 }
 /**
  * Typealias, Error-type
  */
- extension UIImage{
-  public typealias DownloadComplete = (UIImage?,IMGError?) -> Void
+ extension UIImage {
+  public typealias DownloadComplete = (UIImage?, IMGError?) -> Void
   public enum IMGError: Error {
       case invalideWebPath
       case imageDataIsCorrupted
@@ -29,18 +29,18 @@ import UIKit.UIImage
 /**
  * Helper methods
  */
- extension UIImage{
+ extension UIImage {
    /**
     * Assign and convert data to Image
     */
    fileprivate static func downloadImage(url: URL, downloadComplete:@escaping UIImage.DownloadComplete) {
       //        print("Download Started")
       getDataFromUrl(url: url) { data, response, error in
-         guard let data = data, error == nil else { downloadComplete(nil,.errorGettingDataFromURL); return}
+         guard let data = data, error == nil else { downloadComplete(nil, .errorGettingDataFromURL); return }
          Swift.print(response?.suggestedFilename ?? url.lastPathComponent)
          //            print("Download Finished")
-         guard let image = UIImage(data: data) else {downloadComplete(nil,.imageDataIsCorrupted);return}
-         downloadComplete(image,nil)
+         guard let image = UIImage(data: data) else { downloadComplete(nil, .imageDataIsCorrupted); return }
+         downloadComplete(image, nil)
       }
    }
    fileprivate typealias URLQuery = (Data?, URLResponse?, Error?) -> ()
