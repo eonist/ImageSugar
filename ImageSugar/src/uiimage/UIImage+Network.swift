@@ -16,17 +16,6 @@ import UIKit.UIImage
    }
 }
 /**
- * Typealias, Error-type
- */
- extension UIImage {
-  public typealias DownloadComplete = (UIImage?, IMGError?) -> Void
-  public enum IMGError: Error {
-      case invalideWebPath
-      case imageDataIsCorrupted
-      case errorGettingDataFromURL
-   }
-}
-/**
  * Helper methods
  */
  extension UIImage {
@@ -34,7 +23,7 @@ import UIKit.UIImage
     * Assign and convert data to Image
     */
    fileprivate static func downloadImage(url: URL, downloadComplete:@escaping UIImage.DownloadComplete) {
-      //        print("Download Started")
+      //print("Download Started")
       getDataFromUrl(url: url) { data, response, error in
          guard let data = data, error == nil else { downloadComplete(nil, .errorGettingDataFromURL); return }
          Swift.print(response?.suggestedFilename ?? url.lastPathComponent)
