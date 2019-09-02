@@ -32,13 +32,11 @@ import UIKit.UIImage
          downloadComplete(image, nil)
       }
    }
-   fileprivate typealias URLQuery = (Data?, URLResponse?, Error?) -> ()
+   fileprivate typealias URLQuery = (Data?, URLResponse?, Error?) -> Void
    /**
     * Get data from URL
     */
    private static func getDataFromUrl(url: URL, completion: @escaping URLQuery) {
-      URLSession.shared.dataTask(with: url) { data, response, error in
-         completion(data, response, error)
-         }.resume()
+      URLSession.shared.dataTask(with: url) { data, response, error in  completion(data, response, error) }.resume()
    }
 }

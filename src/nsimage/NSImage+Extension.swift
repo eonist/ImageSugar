@@ -8,15 +8,15 @@ extension NSImage {
     */
 	 var cgImage: CGImage? {
        return autoreleasepool {
-          return self.cgImage(forProposedRect: nil, context: nil, hints: nil)
+         self.cgImage(forProposedRect: nil, context: nil, hints: nil)
        }
     }
 	 /**
      * New
      */
 	  var ciimage: CIImage? {
-       guard let cgImg:CGImage = self.cgImage else {Swift.print("unable to convert to cgImage");return nil}
-       let ciImg:CIImage? = CoreImage.CIImage.init(cgImage: cgImg)
+       guard let cgImg: CGImage = self.cgImage else { Swift.print("unable to convert to cgImage"); return nil }
+       let ciImg: CoreImage.CIImage? = .init(cgImage: cgImg)
        return ciImg
     }
 }
