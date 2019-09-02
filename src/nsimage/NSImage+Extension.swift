@@ -6,7 +6,7 @@ extension NSImage {
     * creates cgimage from nsimage
     * - Important: ⚠️️ we use autoreleasepool{} or else there will be memory leakage
     */
-   var cgImage: CGImage? {
+   public var cgImage: CGImage? {
       return autoreleasepool {
          self.cgImage(forProposedRect: nil, context: nil, hints: nil)
       }
@@ -14,10 +14,30 @@ extension NSImage {
    /**
     * New
     */
-   var ciimage: CIImage? {
+   public var ciimage: CIImage? {
       guard let cgImg: CGImage = self.cgImage else { Swift.print("unable to convert to cgImage"); return nil }
       let ciImg: CoreImage.CIImage? = .init(cgImage: cgImg)
       return ciImg
+   }
+   /**
+    * Resize nsimage
+    * - Ref: https://stackoverflow.com/questions/11949250/how-to-resize-nsimage
+    */
+   public func resize(newSize: CGSize) -> NSImage {
+      let destSize = NSMakeSize(CGFloat(newSize.width), CGFloat(newSize.height))
+      let rep = NSBitmapImageRep(bitmapDataPlanes: nil, pixelsWide: Int(destSize.width), pixelsHigh: Int(destSize.height), bitsPerSample: 8, samplesPerPixel: 4, hasAlpha: true, isPlanar: false, colorSpaceName: .calibratedRGB, bytesPerRow: 0, bitsPerPixel: 0)
+      rep?.size = destSize
+      NSGraphicsContext.saveGraphicsState()
+      if let aRep = rep {
+         NSGraphicsContext.current = NSGraphicsContext(bitmapImageRep: aRep)
+      }
+      self.draw(in: NSMakeRect(0, 0, destSize.width, destSize.height), from: NSZeroRect, operation: NSCompositingOperation.copy, fraction: 1.0)
+      NSGraphicsContext.restoreGraphicsState()
+      let newImage = NSImage(size: destSize)
+      if let aRep = rep {
+         newImage.addRepresentation(aRep)
+      }
+      return newImage
    }
 }
 /**
