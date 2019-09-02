@@ -14,6 +14,7 @@
 		9D1A3B8E231D0FC7009E2B77 /* UIImageView+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1A3B87231D0FC7009E2B77 /* UIImageView+Network.swift */; };
 		9D1A3B8F231D0FC7009E2B77 /* UIImageView+Network+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1A3B88231D0FC7009E2B77 /* UIImageView+Network+Type.swift */; };
 		9D1A3B91231D0FD9009E2B77 /* NSImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1A3B8A231D0FC7009E2B77 /* NSImage+Extension.swift */; };
+		9D1A3BA4231D2A6A009E2B77 /* NSImage+NSImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1A3BA2231D2A5D009E2B77 /* NSImage+NSImageView.swift */; };
 		F1BED6BD21B5041600A0D3D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED6BC21B5041600A0D3D4 /* AppDelegate.swift */; };
 		F1BED6BF21B5041600A0D3D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED6BE21B5041600A0D3D4 /* ViewController.swift */; };
 		F1BED6C221B5041600A0D3D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1BED6C021B5041600A0D3D4 /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 		9D1A3B87231D0FC7009E2B77 /* UIImageView+Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Network.swift"; sourceTree = "<group>"; };
 		9D1A3B88231D0FC7009E2B77 /* UIImageView+Network+Type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Network+Type.swift"; sourceTree = "<group>"; };
 		9D1A3B8A231D0FC7009E2B77 /* NSImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+Extension.swift"; sourceTree = "<group>"; };
+		9D1A3BA2231D2A5D009E2B77 /* NSImage+NSImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+NSImageView.swift"; sourceTree = "<group>"; };
 		F1BED6B921B5041600A0D3D4 /* ImageSugarExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageSugarExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1BED6BC21B5041600A0D3D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1BED6BE21B5041600A0D3D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				9D1A3B8A231D0FC7009E2B77 /* NSImage+Extension.swift */,
+				9D1A3BA2231D2A5D009E2B77 /* NSImage+NSImageView.swift */,
 			);
 			path = nsimage;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D1A3BA4231D2A6A009E2B77 /* NSImage+NSImageView.swift in Sources */,
 				9D1A3B91231D0FD9009E2B77 /* NSImage+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

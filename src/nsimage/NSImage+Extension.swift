@@ -4,21 +4,21 @@ import Cocoa
 extension NSImage {
    /**
     * creates cgimage from nsimage
-	 * - Important: ⚠️️ we use autoreleasepool{} or else there will be memory leakage
+    * - Important: ⚠️️ we use autoreleasepool{} or else there will be memory leakage
     */
-	 var cgImage: CGImage? {
-       return autoreleasepool {
+   var cgImage: CGImage? {
+      return autoreleasepool {
          self.cgImage(forProposedRect: nil, context: nil, hints: nil)
-       }
-    }
-	 /**
-     * New
-     */
-	  var ciimage: CIImage? {
-       guard let cgImg: CGImage = self.cgImage else { Swift.print("unable to convert to cgImage"); return nil }
-       let ciImg: CoreImage.CIImage? = .init(cgImage: cgImg)
-       return ciImg
-    }
+      }
+   }
+   /**
+    * New
+    */
+   var ciimage: CIImage? {
+      guard let cgImg: CGImage = self.cgImage else { Swift.print("unable to convert to cgImage"); return nil }
+      let ciImg: CoreImage.CIImage? = .init(cgImage: cgImg)
+      return ciImg
+   }
 }
 /**
  * Inverts an image (black becomes white etc)
