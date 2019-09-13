@@ -13,7 +13,7 @@ extension NSImageView {
    /**
     * Create NSImageView with one line
     * ## Examples:
-    * guard let imageView: NSImageView = NSImageView.init(filePath: filePath) else {fatalError("no content")}
+    * guard let imageView: NSImageView = .init(filePath: filePath) else { fatalError("no content") }
     */
    public convenience init?(filePath: String, origin: CGPoint = .zero) {
       guard let img = NSImage.init(contentsOfFile: filePath) else { Swift.print("Couldnt load img"); return nil}

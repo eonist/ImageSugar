@@ -5,7 +5,7 @@ import UIKit.UIImage
 
  extension UIImage {
     /**
-     * let resizedImage = image.resize(to: CGSize(width: 50, height: 50))
+     * let resizedImage = image.resize(to: .init(width: 50, height: 50))
      */
     public func resize(to size: CGSize) -> UIImage {
       return UIGraphicsImageRenderer(size: size).image { _ in
@@ -23,8 +23,9 @@ import UIKit.UIImage
          rendererContext.fill(CGRect(origin: .zero, size: size))
       }
    }
-    /**
-    * someUIImage.cgImage doesnt work so we use this
+   /**
+    * ## Examples:
+    * someUIImage.cgImage doesn't work so we use this
     */
    func cgImage() -> CGImage? {
       guard let ciImage = self.ciImage else { return nil }
@@ -33,13 +34,14 @@ import UIKit.UIImage
    }
 
    /**
-    * Sometimes uiImage.ciImage just doesn't work
+    * - Note: Sometimes uiImage.ciImage just doesn't work
     */
    func ciImage() -> CIImage {
       guard let cgImage: CGImage = self.cgImage else { Swift.print("UIImage.ciImage() - unable to create cgimage"); fatalError("unable to return") }
       return CoreImage.CIImage(cgImage: cgImage)
    }
    /**
+    * Returns a color for a point in UIImage
     * - Note: Somehow this works with retina images where scale is 2x as well
     * - Note: alternative: https://gist.github.com/giulio92/69e4f74217422154bb25d2a35d6710f8
     */
@@ -49,7 +51,7 @@ import UIKit.UIImage
       guard let pixelData: CFData = dataProvider.data else { Swift.print("unable to get cfData"); return nil }
       let data: UnsafePointer<UInt8> = CFDataGetBytePtr(pixelData)
       let pixelInfo: Int = ((Int(self.size.width * self.scale) * Int(pos.y)) + Int(pos.x)) * 4
-      //      Swift.print("pixelInfo:  \(pixelInfo)")
+      // Swift.print("pixelInfo:  \(pixelInfo)")
       let r = CGFloat(data[pixelInfo]) / CGFloat(255.0)
       let g = CGFloat(data[pixelInfo + 1]) / CGFloat(255.0)
       let b = CGFloat(data[pixelInfo + 2]) / CGFloat(255.0)

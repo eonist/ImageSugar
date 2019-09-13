@@ -16,8 +16,6 @@
 		9D1A3B91231D0FD9009E2B77 /* NSImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1A3B8A231D0FC7009E2B77 /* NSImage+Extension.swift */; };
 		9D1A3BA4231D2A6A009E2B77 /* NSImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1A3BA2231D2A5D009E2B77 /* NSImageView+Extension.swift */; };
 		F1BED6BD21B5041600A0D3D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED6BC21B5041600A0D3D4 /* AppDelegate.swift */; };
-		F1BED6BF21B5041600A0D3D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED6BE21B5041600A0D3D4 /* ViewController.swift */; };
-		F1BED6C221B5041600A0D3D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1BED6C021B5041600A0D3D4 /* Main.storyboard */; };
 		F1BED6C421B5041900A0D3D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1BED6C321B5041900A0D3D4 /* Assets.xcassets */; };
 		F1BED6C721B5041900A0D3D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1BED6C521B5041900A0D3D4 /* LaunchScreen.storyboard */; };
 		F1BED6D721B5042A00A0D3D4 /* ImageSugar.h in Headers */ = {isa = PBXBuildFile; fileRef = F1BED6D521B5042A00A0D3D4 /* ImageSugar.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -62,8 +60,6 @@
 		9D1A3BA2231D2A5D009E2B77 /* NSImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImageView+Extension.swift"; sourceTree = "<group>"; };
 		F1BED6B921B5041600A0D3D4 /* ImageSugarExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageSugarExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1BED6BC21B5041600A0D3D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F1BED6BE21B5041600A0D3D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F1BED6C121B5041600A0D3D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1BED6C321B5041900A0D3D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1BED6C621B5041900A0D3D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1BED6C821B5041900A0D3D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -170,8 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				F1BED6BC21B5041600A0D3D4 /* AppDelegate.swift */,
-				F1BED6BE21B5041600A0D3D4 /* ViewController.swift */,
-				F1BED6C021B5041600A0D3D4 /* Main.storyboard */,
 				F1BED6C321B5041900A0D3D4 /* Assets.xcassets */,
 				F1BED6C521B5041900A0D3D4 /* LaunchScreen.storyboard */,
 				F1BED6C821B5041900A0D3D4 /* Info.plist */,
@@ -323,7 +317,6 @@
 			files = (
 				F1BED6C721B5041900A0D3D4 /* LaunchScreen.storyboard in Resources */,
 				F1BED6C421B5041900A0D3D4 /* Assets.xcassets in Resources */,
-				F1BED6C221B5041600A0D3D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +380,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1BED6BF21B5041600A0D3D4 /* ViewController.swift in Sources */,
 				F1BED6BD21B5041600A0D3D4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,14 +407,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F1BED6C021B5041600A0D3D4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F1BED6C121B5041600A0D3D4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F1BED6C521B5041900A0D3D4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

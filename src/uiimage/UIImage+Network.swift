@@ -21,13 +21,12 @@ import UIKit.UIImage
  extension UIImage {
    /**
     * Assign and convert data to Image
+    * - Fixme: ⚠️️ Add Result type
     */
    fileprivate static func downloadImage(url: URL, downloadComplete:@escaping UIImage.DownloadComplete) {
-      //print("Download Started")
       getDataFromUrl(url: url) { data, response, error in
          guard let data = data, error == nil else { downloadComplete(nil, .errorGettingDataFromURL); return }
          Swift.print(response?.suggestedFilename ?? url.lastPathComponent)
-         //            print("Download Finished")
          guard let image = UIImage(data: data) else { downloadComplete(nil, .imageDataIsCorrupted); return }
          downloadComplete(image, nil)
       }

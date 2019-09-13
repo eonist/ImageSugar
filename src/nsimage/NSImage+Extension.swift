@@ -12,31 +12,27 @@ extension NSImage {
       }
    }
    /**
-    * New
+    * Converts NSImage to CIImage
     */
-   public var ciimage: CIImage? {
+   public var ciImage: CIImage? {
       guard let cgImg: CGImage = self.cgImage else { Swift.print("unable to convert to cgImage"); return nil }
       let ciImg: CoreImage.CIImage? = .init(cgImage: cgImg)
       return ciImg
    }
    /**
-    * Resize nsimage
+    * Resize NSImage
     * - Ref: https://stackoverflow.com/questions/11949250/how-to-resize-nsimage
     */
    public func resize(newSize: CGSize) -> NSImage {
-      let destSize = NSMakeSize(CGFloat(newSize.width), CGFloat(newSize.height))
+      let destSize: CGSize = .init(width: newSize.width, height: newSize.height)
       let rep = NSBitmapImageRep(bitmapDataPlanes: nil, pixelsWide: Int(destSize.width), pixelsHigh: Int(destSize.height), bitsPerSample: 8, samplesPerPixel: 4, hasAlpha: true, isPlanar: false, colorSpaceName: .calibratedRGB, bytesPerRow: 0, bitsPerPixel: 0)
       rep?.size = destSize
       NSGraphicsContext.saveGraphicsState()
-      if let aRep = rep {
-         NSGraphicsContext.current = NSGraphicsContext(bitmapImageRep: aRep)
-      }
-      self.draw(in: NSMakeRect(0, 0, destSize.width, destSize.height), from: NSZeroRect, operation: NSCompositingOperation.copy, fraction: 1.0)
+      if let aRep = rep { NSGraphicsContext.current = NSGraphicsContext(bitmapImageRep: aRep) }
+      self.draw(in: .init(origin: .zero, size: destSize), from: NSZeroRect, operation: NSCompositingOperation.copy, fraction: 1.0)
       NSGraphicsContext.restoreGraphicsState()
-      let newImage = NSImage(size: destSize)
-      if let aRep = rep {
-         newImage.addRepresentation(aRep)
-      }
+      let newImage: NSImage = .init(size: destSize)
+      if let aRep = rep { newImage.addRepresentation(aRep) }
       return newImage
    }
 }
