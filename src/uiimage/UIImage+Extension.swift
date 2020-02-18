@@ -58,5 +58,13 @@ import UIKit.UIImage
       let a = CGFloat(data[pixelInfo + 3]) / CGFloat(255.0)
       return UIColor(red: r, green: g, blue: b, alpha: a)
    }
+    /**
+    * Compare images
+    * A more precise algo: https://stackoverflow.com/a/53958281/5389500
+    * - since swift 5 you may do img == img
+    */
+   func isEqualToImage(image: UIImage) -> Bool {
+      return self.pngData() == image.pngData()
+   }
 }
 #endif
