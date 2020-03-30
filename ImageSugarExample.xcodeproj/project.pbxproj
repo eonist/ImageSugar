@@ -16,6 +16,19 @@
 		F149653324323456008C1847 /* CIContext+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149652924323456008C1847 /* CIContext+Extension.swift */; };
 		F149653424323456008C1847 /* NSImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149652B24323456008C1847 /* NSImage+Extension.swift */; };
 		F149653524323456008C1847 /* NSImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149652C24323456008C1847 /* NSImageView+Extension.swift */; };
+		F149653D24323889008C1847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149653C24323889008C1847 /* AppDelegate.swift */; };
+		F149653F24323889008C1847 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149653E24323889008C1847 /* ViewController.swift */; };
+		F14965412432388B008C1847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F14965402432388B008C1847 /* Assets.xcassets */; };
+		F14965442432388B008C1847 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F14965422432388B008C1847 /* Main.storyboard */; };
+		F149654A243238A1008C1847 /* UIImage+Network+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149652124323456008C1847 /* UIImage+Network+Type.swift */; };
+		F149654B243238A1008C1847 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149652224323456008C1847 /* UIImage+Extension.swift */; };
+		F149654C243238A1008C1847 /* UIImage+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149652324323456008C1847 /* UIImage+Network.swift */; };
+		F149654D243238A1008C1847 /* CGImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149652524323456008C1847 /* CGImage+Extension.swift */; };
+		F149654E243238A1008C1847 /* UIImageView+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149652724323456008C1847 /* UIImageView+Network.swift */; };
+		F149654F243238A1008C1847 /* UIImageView+Network+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149652824323456008C1847 /* UIImageView+Network+Type.swift */; };
+		F1496550243238A1008C1847 /* CIContext+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149652924323456008C1847 /* CIContext+Extension.swift */; };
+		F1496551243238A1008C1847 /* NSImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149652B24323456008C1847 /* NSImage+Extension.swift */; };
+		F1496552243238A1008C1847 /* NSImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149652C24323456008C1847 /* NSImageView+Extension.swift */; };
 		F1BED6BD21B5041600A0D3D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED6BC21B5041600A0D3D4 /* AppDelegate.swift */; };
 		F1BED6C421B5041900A0D3D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1BED6C321B5041900A0D3D4 /* Assets.xcassets */; };
 		F1BED6C721B5041900A0D3D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1BED6C521B5041900A0D3D4 /* LaunchScreen.storyboard */; };
@@ -44,6 +57,13 @@
 		F149652924323456008C1847 /* CIContext+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CIContext+Extension.swift"; sourceTree = "<group>"; };
 		F149652B24323456008C1847 /* NSImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+Extension.swift"; sourceTree = "<group>"; };
 		F149652C24323456008C1847 /* NSImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImageView+Extension.swift"; sourceTree = "<group>"; };
+		F149653A24323889008C1847 /* ImageSugarExampleMacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageSugarExampleMacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F149653C24323889008C1847 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F149653E24323889008C1847 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F14965402432388B008C1847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F14965432432388B008C1847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F14965452432388B008C1847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F14965462432388B008C1847 /* ImageSugarExampleMacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ImageSugarExampleMacOS.entitlements; sourceTree = "<group>"; };
 		F1BED6B921B5041600A0D3D4 /* ImageSugarExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageSugarExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1BED6BC21B5041600A0D3D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1BED6C321B5041900A0D3D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,6 +72,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F149653724323889008C1847 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1BED6B621B5041600A0D3D4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -118,11 +145,25 @@
 			path = NSImage;
 			sourceTree = "<group>";
 		};
+		F149653B24323889008C1847 /* ImageSugarExampleMacOS */ = {
+			isa = PBXGroup;
+			children = (
+				F149653C24323889008C1847 /* AppDelegate.swift */,
+				F149653E24323889008C1847 /* ViewController.swift */,
+				F14965402432388B008C1847 /* Assets.xcassets */,
+				F14965422432388B008C1847 /* Main.storyboard */,
+				F14965452432388B008C1847 /* Info.plist */,
+				F14965462432388B008C1847 /* ImageSugarExampleMacOS.entitlements */,
+			);
+			path = ImageSugarExampleMacOS;
+			sourceTree = "<group>";
+		};
 		F1BED6B021B5041600A0D3D4 = {
 			isa = PBXGroup;
 			children = (
 				F149651E24323456008C1847 /* Sources */,
 				F1BED6BB21B5041600A0D3D4 /* ImageSugarExample */,
+				F149653B24323889008C1847 /* ImageSugarExampleMacOS */,
 				F1BED6BA21B5041600A0D3D4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -131,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				F1BED6B921B5041600A0D3D4 /* ImageSugarExample.app */,
+				F149653A24323889008C1847 /* ImageSugarExampleMacOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,6 +191,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F149653924323889008C1847 /* ImageSugarExampleMacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F14965472432388B008C1847 /* Build configuration list for PBXNativeTarget "ImageSugarExampleMacOS" */;
+			buildPhases = (
+				F149653624323889008C1847 /* Sources */,
+				F149653724323889008C1847 /* Frameworks */,
+				F149653824323889008C1847 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageSugarExampleMacOS;
+			productName = ImageSugarExampleMacOS;
+			productReference = F149653A24323889008C1847 /* ImageSugarExampleMacOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F1BED6B821B5041600A0D3D4 /* ImageSugarExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1BED6CB21B5041900A0D3D4 /* Build configuration list for PBXNativeTarget "ImageSugarExample" */;
@@ -174,10 +233,13 @@
 		F1BED6B121B5041600A0D3D4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = FutureLab;
 				TargetAttributes = {
+					F149653924323889008C1847 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					F1BED6B821B5041600A0D3D4 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1130;
@@ -198,11 +260,21 @@
 			projectRoot = "";
 			targets = (
 				F1BED6B821B5041600A0D3D4 /* ImageSugarExample */,
+				F149653924323889008C1847 /* ImageSugarExampleMacOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F149653824323889008C1847 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F14965412432388B008C1847 /* Assets.xcassets in Resources */,
+				F14965442432388B008C1847 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1BED6B721B5041600A0D3D4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -235,6 +307,24 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F149653624323889008C1847 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F149654A243238A1008C1847 /* UIImage+Network+Type.swift in Sources */,
+				F149653F24323889008C1847 /* ViewController.swift in Sources */,
+				F1496551243238A1008C1847 /* NSImage+Extension.swift in Sources */,
+				F149653D24323889008C1847 /* AppDelegate.swift in Sources */,
+				F149654B243238A1008C1847 /* UIImage+Extension.swift in Sources */,
+				F149654C243238A1008C1847 /* UIImage+Network.swift in Sources */,
+				F149654D243238A1008C1847 /* CGImage+Extension.swift in Sources */,
+				F1496550243238A1008C1847 /* CIContext+Extension.swift in Sources */,
+				F149654E243238A1008C1847 /* UIImageView+Network.swift in Sources */,
+				F1496552243238A1008C1847 /* NSImageView+Extension.swift in Sources */,
+				F149654F243238A1008C1847 /* UIImageView+Network+Type.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1BED6B521B5041600A0D3D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -255,6 +345,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		F14965422432388B008C1847 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F14965432432388B008C1847 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		F1BED6C521B5041900A0D3D4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -266,6 +364,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F14965482432388B008C1847 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ImageSugarExampleMacOS/ImageSugarExampleMacOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B5CC9TD7P7;
+				INFOPLIST_FILE = ImageSugarExampleMacOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = co.passbook.ImageSugarExampleMacOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F14965492432388B008C1847 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ImageSugarExampleMacOS/ImageSugarExampleMacOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B5CC9TD7P7;
+				INFOPLIST_FILE = ImageSugarExampleMacOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = co.passbook.ImageSugarExampleMacOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		F1BED6C921B5041900A0D3D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -423,6 +565,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F14965472432388B008C1847 /* Build configuration list for PBXNativeTarget "ImageSugarExampleMacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F14965482432388B008C1847 /* Debug */,
+				F14965492432388B008C1847 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F1BED6B421B5041600A0D3D4 /* Build configuration list for PBXProject "ImageSugarExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

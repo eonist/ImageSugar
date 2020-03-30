@@ -1,12 +1,9 @@
-#if os(OSX)
-import AppKit.NSImage
-#else
+#if os(iOS)
 import UIKit.UIImage
-#endif
 /**
  * Fixme: ⚠️️ Add a way to also get response, maybe look into result?
  */
- extension UIImage {
+extension UIImage {
    /**
     * get UIImage from webPath
     */
@@ -18,7 +15,7 @@ import UIKit.UIImage
 /**
  * Helper methods
  */
- extension UIImage {
+extension UIImage {
    /**
     * Assign and convert data to Image
     * - Fixme: ⚠️️ Add Result type
@@ -39,3 +36,4 @@ import UIKit.UIImage
       URLSession.shared.dataTask(with: url) { data, response, error in  completion(data, response, error) }.resume()
    }
 }
+#endif

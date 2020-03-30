@@ -1,8 +1,5 @@
 import Foundation
 import CoreImage
-#if os(macOS)
-import Cocoa
-#endif
 
 extension CIImage {
    /**

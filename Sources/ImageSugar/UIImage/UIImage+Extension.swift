@@ -1,9 +1,7 @@
-#if os(OSX)
-import AppKit.NSView
-#else
+#if os(iOS)
 import UIKit.UIImage
 
- extension UIImage {
+extension UIImage {
     /**
      * let resizedImage = image.resize(to: .init(width: 50, height: 50))
      */

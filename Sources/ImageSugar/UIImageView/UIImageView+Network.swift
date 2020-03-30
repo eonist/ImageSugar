@@ -1,6 +1,7 @@
+#if os(iOS)
 import UIKit
 
- extension UIImageView {
+extension UIImageView {
    /**
     * Simplifies loading an image from a weburl to uiimageview
     */
@@ -33,3 +34,4 @@ import UIKit
       }
    }
 }
+#endif

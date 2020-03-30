@@ -1,8 +1,5 @@
-#if os(OSX)
-import AppKit.NSImage
-#else
+#if os(iOS)
 import UIKit.UIImage
-#endif
 /**
  * Typealias, Error-type
  */
@@ -14,3 +11,4 @@ extension UIImage {
       case errorGettingDataFromURL
    }
 }
+#endif

@@ -48,10 +48,11 @@ extension NSImage {
     * let redImage = NSImage.image(color: .red, size: .init(width: 128, height: 128))
     */
    public static func image(size: CGSize, color: NSColor, scale: CGFloat = 1.0) -> NSImage? {
-      self.init(size: size)
-      lockFocus()
+      let initiation = self.init(size: size)
+      initiation.lockFocus()
       color.drawSwatch(in: NSRect(origin: .zero, size: size))
-      unlockFocus()
+      initiation.unlockFocus()
+      return initiation
    }
    /**
     * nsimage -> png

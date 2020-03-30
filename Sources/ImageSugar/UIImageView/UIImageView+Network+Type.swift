@@ -1,3 +1,4 @@
+#if os(iOS)
 import UIKit
 /**
  * Typalias
@@ -13,3 +14,4 @@ extension UIImageView {
       Swift.print("img error:  \(String(describing: err))")
    }
 }
+#endif
