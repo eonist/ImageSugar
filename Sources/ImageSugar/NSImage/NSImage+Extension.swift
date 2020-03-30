@@ -1,4 +1,4 @@
-#if os(OSX)
+#if os(macOS)
 import Cocoa
 
 extension NSImage {
@@ -15,7 +15,7 @@ extension NSImage {
     * - Important: ⚠️️ we use autoreleasepool{} or else there will be memory leakage
     */
    public var cgImage: CGImage? {
-      return autoreleasepool {
+      autoreleasepool {
          self.cgImage(forProposedRect: nil, context: nil, hints: nil)
       }
    }
@@ -37,7 +37,7 @@ extension NSImage {
       rep?.size = destSize
       NSGraphicsContext.saveGraphicsState()
       if let aRep = rep { NSGraphicsContext.current = NSGraphicsContext(bitmapImageRep: aRep) }
-      self.draw(in: .init(origin: .zero, size: destSize), from: NSZeroRect, operation: NSCompositingOperation.copy, fraction: 1.0)
+      self.draw(in: .init(origin: .zero, size: destSize), from: NSRect.zero, operation: NSCompositingOperation.copy, fraction: 1.0)
       NSGraphicsContext.restoreGraphicsState()
       let newImage: NSImage = .init(size: destSize)
       if let aRep = rep { newImage.addRepresentation(aRep) }

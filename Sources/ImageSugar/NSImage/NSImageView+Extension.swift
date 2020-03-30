@@ -1,3 +1,4 @@
+#if os(macOS)
 import Cocoa
 
 extension NSImageView {
@@ -16,8 +17,9 @@ extension NSImageView {
     * guard let imageView: NSImageView = .init(filePath: filePath) else { fatalError("no content") }
     */
    public convenience init?(filePath: String, origin: CGPoint = .zero) {
-      guard let img = NSImage.init(contentsOfFile: filePath) else { Swift.print("Couldnt load img"); return nil}
+      guard let img = NSImage(contentsOfFile: filePath) else { Swift.print("Couldnt load img"); return nil }
       self.init(frame: .init(origin: origin, size: img.size))
       self.image = img
    }
 }
+#endif
