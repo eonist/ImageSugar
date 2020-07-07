@@ -56,6 +56,9 @@ extension UIImage {
       let a = CGFloat(data[pixelInfo + 3]) / CGFloat(255.0)
       return UIColor(red: r, green: g, blue: b, alpha: a)
    }
+   public func grayScale() {
+       // see https://prograils.com/posts/grayscale-conversion-swift for solution
+   }
     /**
     * Compare images
     * A more precise algo: https://stackoverflow.com/a/53958281/5389500
