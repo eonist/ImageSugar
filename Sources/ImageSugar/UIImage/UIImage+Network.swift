@@ -1,7 +1,8 @@
 #if os(iOS)
 import UIKit.UIImage
 /**
- * Fixme: ⚠️️ Add a way to also get response, maybe look into result?
+ * - Fixme: ⚠️️ Add a way to also get response, maybe look into result?
+ * - Fixme: ⚠️️ add examples?
  */
 extension UIImage {
    /**
