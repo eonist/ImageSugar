@@ -4,6 +4,7 @@ import UIKit.UIImage
 extension UIImage {
     /**
      * let resizedImage = image.resize(to: .init(width: 50, height: 50))
+     * has fit and fill: https://github.com/haoking/SwiftyUI
      */
     public func resize(to size: CGSize) -> UIImage {
       UIGraphicsImageRenderer(size: size).image { _ in
